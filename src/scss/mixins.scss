@@ -1,0 +1,126 @@
+@mixin cardDivs {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: rgba($color: #0f0c29, $alpha: 0.6);
+    background-clip: border-box;
+    // border: 1px solid rgba(0,0,0,.125);
+    border-radius: 8px;
+    box-shadow: 5px 5px 3px #999;
+    color: whitesmoke;
+    margin-bottom: 43px;
+    line-height: 1.7em;
+    padding-bottom: 10px;
+
+    &:hover {
+        border-left: 5px solid #0f0c29;
+        border-top: 5px solid #0f0c29;
+    }
+
+    @media only screen and (min-width: 411px){
+        margin-bottom: 60px
+    }
+
+    @media only screen and (min-width: 768px) {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+
+    @media only screen and (min-width: 992px){
+        width: 80%;
+        margin: 0 auto 50px;
+    }
+}
+
+.cards {
+    @include cardDivs;
+}
+
+@mixin horizontalLine {
+   width: 90%;
+   margin: auto;
+
+   @media only screen and (min-width: 768px) {
+        display: none;
+    }
+
+}
+
+.hr {
+    @include horizontalLine;
+}
+
+@mixin logoMobile {
+    position: relative;
+    bottom: 25px;
+    right: 27%;
+    border-radius: 50%;
+    max-width: 100%;
+    width: 20%;
+    height: auto;
+
+    @media only screen and (min-width: 411px) {
+        bottom:35px;
+    }
+
+    @media only screen and (min-width:768px) {
+        position: relative;
+        bottom: 0px;
+        right: 0;
+        border-radius: 50%;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.company-logo img{
+    @include  logoMobile;
+}
+
+@mixin companyName {
+    font-size: 24px;
+    color: #193955;
+    font-weight: 700;
+}
+
+.company-name {
+    @include companyName;
+}
+
+@mixin techStack {
+    background-color: black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.tech-stack span{
+    @include techStack;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .first-div, .second-div {
+        display: flex;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 10px;
+    }
+
+    .tech-stack {
+        margin: 35px auto;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,108 @@
+@import './variables.scss';
+
+header #wrapper{
+    // text-align:center;
+    
+    margin: 0 auto;
+}
+
+div#wrapper {
+    background-image: url('../images/header-image.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+div#overlay {
+    background: rgba($color: #0f0c29, $alpha: 0.5);
+}
+
+p#short-text {
+    padding: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+input#job-list{
+    margin: 20px auto;
+    padding: $appFormPadding;
+    width: 80%;
+    border-radius: $appFormBorderRadius;
+    border: 0;
+}
+
+form {
+    position: relative;
+}
+
+button#search {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    padding: $appFormPadding;
+    border-top-right-radius: $appFormBorderRadius;
+    border-bottom-right-radius: $appFormBorderRadius;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    color: white;
+    border: 0px;
+}
+
+input:focus, button:focus {
+    // box-shadow: none;
+    outline: none;
+}
+
+.joblists-container {
+    width: 90%;
+    margin: 50px auto;
+}
+
+div.company-logo {
+    margin-bottom: $companyDetails;
+}
+
+div.company-info {
+    padding-bottom: $companyInfo;
+}
+
+div.tech-stack {
+    margin-bottom: $companyInfo;
+}
+
+div.second-div .hr{
+   margin-bottom: $companyInfo;
+}
+
+div.company-role {
+    font-size: $fontSize;
+    font-weight: 600;
+}
+
+ 
+@media only screen and (min-width: 768px) {
+   input#job-list {
+        width: 50%;
+    }
+
+    button#search {
+        position: absolute;
+        // left: 20px;
+        right: 25%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+   input#job-list {
+        width: 40%;
+    }
+
+    button#search {
+        position: absolute;
+        // left: 20px;
+        right: 30%;
+    }
+}
+
+

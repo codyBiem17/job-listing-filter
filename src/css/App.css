@@ -1,0 +1,198 @@
+header #wrapper {
+  margin: 0 auto;
+}
+
+div#wrapper {
+  background-image: url("../images/header-image.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+div#overlay {
+  background: rgba(15, 12, 41, 0.5);
+}
+
+p#short-text {
+  padding: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+input#job-list {
+  margin: 20px auto;
+  padding: 7px;
+  width: 80%;
+  border-radius: 30px;
+  border: 0;
+}
+
+form {
+  position: relative;
+}
+
+button#search {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  padding: 7px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  color: white;
+  border: 0px;
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
+.joblists-container {
+  width: 90%;
+  margin: 50px auto;
+}
+
+div.company-logo {
+  margin-bottom: -20px;
+}
+
+div.company-info {
+  padding-bottom: 15px;
+}
+
+div.tech-stack {
+  margin-bottom: 15px;
+}
+
+div.second-div .hr {
+  margin-bottom: 15px;
+}
+
+div.company-role {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media only screen and (min-width: 768px) {
+  input#job-list {
+    width: 50%;
+  }
+
+  button#search {
+    position: absolute;
+    right: 25%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  input#job-list {
+    width: 40%;
+  }
+
+  button#search {
+    position: absolute;
+    right: 30%;
+  }
+}
+.cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: rgba(15, 12, 41, 0.6);
+  background-clip: border-box;
+  border-radius: 8px;
+  box-shadow: 5px 5px 3px #999;
+  color: whitesmoke;
+  margin-bottom: 43px;
+  line-height: 1.7em;
+  padding-bottom: 10px;
+}
+.cards:hover {
+  border-left: 5px solid #0f0c29;
+  border-top: 5px solid #0f0c29;
+}
+@media only screen and (min-width: 411px) {
+  .cards {
+    margin-bottom: 60px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .cards {
+    width: 80%;
+    margin: 0 auto 50px;
+  }
+}
+
+.hr {
+  width: 90%;
+  margin: auto;
+}
+@media only screen and (min-width: 768px) {
+  .hr {
+    display: none;
+  }
+}
+
+.company-logo img {
+  position: relative;
+  bottom: 25px;
+  right: 27%;
+  border-radius: 50%;
+  max-width: 100%;
+  width: 20%;
+  height: auto;
+}
+@media only screen and (min-width: 411px) {
+  .company-logo img {
+    bottom: 35px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .company-logo img {
+    position: relative;
+    bottom: 0px;
+    right: 0;
+    border-radius: 50%;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.company-name {
+  font-size: 24px;
+  color: #193955;
+  font-weight: 700;
+}
+
+.tech-stack span {
+  background-color: black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .first-div, .second-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+
+  .tech-stack {
+    margin: 35px auto;
+  }
+}
+.App {
+  text-align: center;
+}
