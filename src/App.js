@@ -35,6 +35,7 @@ class App extends Component {
       let str1 = (this.state.inputValue).toUpperCase();
       return (
         job.role.toUpperCase().includes(str1) ||
+        job.techStack.toUpperCase().includes(str1) ||
         job.level.toUpperCase().includes(str1) ||
         job.stack1.toUpperCase().includes(str1) ||
         job.stack2.toUpperCase().includes(str1)
@@ -63,13 +64,13 @@ class App extends Component {
               <form onSubmit={this.filterInput}>
                 <input
                   type="text"
-                  list="job-list"
+                  list="joblist"
                   id="job-list"
                   value={this.state.inputValue}
                   onChange={this.handleChange}
                   placeholder="Enter keyword e.g frontend, html"
                 />
-                <datalist id="job-list">
+                <datalist id="joblist">
                   <option value="Frontend" />
                   <option value="javascript" />
                   <option value="css" />
