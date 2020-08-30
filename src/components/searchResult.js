@@ -1,12 +1,12 @@
 import React from 'react';
-import dataArray from './dataArray';
 
-const SearchResult = ({ inputValue, cardLists }) => {
+
+const SearchResult = ({ cardLists }) => {
     
     return (
         <div className="joblists-container" >
             {
-                dataArray.filter(job => job.level === inputValue).map(filteredJobs => 
+                cardLists.map(filteredJobs => 
                         <div className="cards" key={filteredJobs.id}>
                             <div className="first-div">
                                 <div className="company-logo">

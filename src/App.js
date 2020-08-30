@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { useHistory } from 'react-router-dom';
 import JobUI from './components/jobs-ui';
 import SearchResult from './components/searchResult';
 import dataArray from './components/dataArray';
@@ -27,12 +28,29 @@ class App extends Component {
     }
   }
 
-  add = () => {
+  filterInput = (e) => {
+    e.preventDefault();
     const filteredJobs = dataArray.filter(job => {
-      return job.role === this.state.inputValue;
+      // let str1 = job.role.toUpperCase();
+      let str1 = (this.state.inputValue).toUpperCase();
+      return (
+        job.role.toUpperCase().includes(str1) ||
+        job.level.toUpperCase().includes(str1) ||
+        job.stack1.toUpperCase().includes(str1) ||
+        job.stack2.toUpperCase().includes(str1)
+      );
     })
 
+    this.setState({
+      cardLists: filteredJobs
+    })
     console.log(filteredJobs)
+  }
+
+  routeChange = () => {
+    // let path = `./components/searchResult`;
+    // let history = useHistory();
+    // history.push(path);
   }
 
   render() {
@@ -42,7 +60,7 @@ class App extends Component {
           <div id="wrapper">
             <div id="overlay">
               <p id="short-text">Need a job?</p>
-              <form onSubmit={this.handleSubmit}>
+              <form onSubmit={this.filterInput}>
                 <input
                   type="text"
                   list="job-list"
@@ -52,7 +70,7 @@ class App extends Component {
                   placeholder="Enter keyword e.g frontend, html"
                 />
                 <datalist id="job-list">
-                  <option value="Frontend Developer" />
+                  <option value="Frontend" />
                   <option value="javascript" />
                   <option value="css" />
                   <option value="senior" />
@@ -70,7 +88,7 @@ class App extends Component {
         </header>
         <main>
           <JobUI />
-          <SearchResult inputValue={this.state.inputValue}/>
+          <SearchResult cardLists={this.state.cardLists} />
         </main>
       </div>
     );

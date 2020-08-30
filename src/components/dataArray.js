@@ -109,8 +109,8 @@ const dataArray = [
         "location": "Remote",
         "techStack": "Frontend",
         "level": "Junior",
-        "stack1": "JavaSript",
-        "stack2": "HTML/CSS",
+        "stack1": "JavaScript",
+        "stack2": "Vue",
         "imgSrc": require("../images/cpny8.jpeg"),
         "color": "#eb5050"
     },
