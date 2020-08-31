@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import JobUI from './components/jobs-ui';
 import SearchResult from './components/searchResult';
 import dataArray from './components/dataArray';
