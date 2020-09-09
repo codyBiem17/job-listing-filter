@@ -1,10 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const SearchResult = ({ cardLists }) => {
     
     return (
         <div className="joblists-container" >
+            <Link to="/"> Go to Main Page</Link>
             {
                 cardLists.map(filteredJobs => 
                         <div className="cards" key={filteredJobs.id}>
