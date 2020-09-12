@@ -34,9 +34,9 @@ const JobUI = () => {
                 <div className='hr'> <hr /> </div>
                 <div className='tech-stack'>
                   <span>{job.techStack}</span>   &nbsp;
-                      <span>{job.level}</span>   &nbsp;
-                      <span>{job.stack1}</span> &nbsp;
-                      <span>{job.stack2}</span>
+                  <span>{job.level}</span>   &nbsp;
+                  <span>{job.stack1}</span> &nbsp;
+                  <span>{job.stack2}</span>
                 </div>
               </div>
             </div>

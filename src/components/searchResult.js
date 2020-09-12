@@ -6,7 +6,9 @@ const SearchResult = ({ cardLists }) => {
     
     return (
         <div className="joblists-container" >
-            <Link to="/"> Go to Main Page</Link>
+            <div className="mainPage">
+                <Link to="/"> Go to Main Page</Link>
+            </div>
             {
                 cardLists.map(filteredJobs => 
                         <div className="cards" key={filteredJobs.id}>

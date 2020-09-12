@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import dataArray from './dataArray';
 
 class Header extends Component {
@@ -18,7 +18,7 @@ class Header extends Component {
             <div id="wrapper">
                 <div id="overlay">
                     <p id="short-text">Need a job?</p>
-                    <form>
+                    <form onSubmit={(e) => filterInput(e)}>
                         <input
                             type="text"
                             list="joblist"
@@ -39,7 +39,8 @@ class Header extends Component {
                             <option value="python" />
                             <option value="intermediate" />
                         </datalist>
-                        <Link to="/result" onSubmit={filterInput}><button id="search">Search</button> </Link>  
+                        
+                        <button type="submit" id="search">Search</button>   
                     </form>
                 </div>
             </div>

@@ -104,6 +104,27 @@
     @include techStack;
 }
 
+@mixin mainPage {
+    position: absolute;
+    top: 27%;
+    right: 20px;
+    background: black;
+    padding: 7px;
+    margin: auto;
+
+    & a {
+        color: rgb(197, 197, 243);
+
+        &:hover {
+            color: whitesmoke;
+        }
+    }
+}
+
+div.mainPage {
+    @include mainPage
+}
+
 
 @media only screen and (min-width: 768px) {
 
