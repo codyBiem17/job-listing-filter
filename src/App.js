@@ -64,7 +64,7 @@ class App extends Component {
           </header>
 
           <main>
-            {this.state.isLoading ? history.push("/") : 'balderdash'}
+            {/* {this.state.isLoading ? history.push("/") : 'balderdash'} */}
             <Route exact path="/">
               <JobUI />
             </Route>
